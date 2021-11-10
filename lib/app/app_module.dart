@@ -1,4 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:fteam_test/app/cpf/view_model/cpf_view_model.dart';
 import 'package:fteam_test/app/cpf/views/cpf_view.dart';
 import 'package:fteam_test/app/movies/services/movie_service.dart';
 import 'package:fteam_test/app/movies/services/movie_service_api_impl.dart';
@@ -17,7 +18,7 @@ class AppModule extends Module {
         Bind.singleton<MovieService>((i) => MovieLocalServiceImpl()),
         Bind.singleton((i) => ImcViewModel()),
         Bind.singleton((i) => PriceViewModel()),
-        Bind.singleton((i) => CpfController()),
+        Bind.singleton((i) => CpfViewModel()),
         Bind.singleton((i) => MovieViewModel(service: Modular.get()))
       ];
 
@@ -30,5 +31,3 @@ class AppModule extends Module {
         ChildRoute('/movies', child: (context, args) => const MoviesView()),
       ];
 }
-
-class CpfController {}
