@@ -19,6 +19,11 @@ class _CpfViewState extends State<CpfView> {
     final controller = Modular.get<CpfViewModel>();
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+            onPressed: () {
+              Modular.to.navigate('/');
+            },
+            icon: Icon(Icons.arrow_back)),
         title: Text("Validador de CPF"),
       ),
       body: AnimatedBuilder(

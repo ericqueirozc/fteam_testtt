@@ -17,6 +17,11 @@ class _PriceViewState extends State<PriceView> {
     final controller = Modular.get<PriceViewModel>();
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+            onPressed: () {
+              Modular.to.navigate('/');
+            },
+            icon: Icon(Icons.arrow_back)),
         title: Text("Conversor de Moedas"),
       ),
       body: Padding(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 import 'components/movie_button.dart';
 import 'components/movie_list_component.dart';
@@ -15,6 +16,11 @@ class _MoviesViewState extends State<MoviesView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+            onPressed: () {
+              Modular.to.navigate('/');
+            },
+            icon: Icon(Icons.arrow_back)),
         title: Text("Filmes"),
         centerTitle: true,
       ),

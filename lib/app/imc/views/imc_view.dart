@@ -20,6 +20,11 @@ class _ImcViewState extends State<ImcView> {
     final controller = Modular.get<ImcViewModel>();
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+            onPressed: () {
+              Modular.to.navigate('/');
+            },
+            icon: Icon(Icons.arrow_back)),
         title: Text("Calculadora de IMC"),
       ),
       body: Padding(
