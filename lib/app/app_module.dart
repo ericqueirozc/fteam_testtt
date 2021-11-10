@@ -10,12 +10,13 @@ import 'package:fteam_test/app/price/views/price_view.dart';
 import 'home/views/home_view.dart';
 import 'imc/controllers/imc_controller.dart';
 import 'imc/views/imc_view.dart';
+import 'movies/services/movie_service_local_impl.dart';
 import 'movies/views/movie_view.dart';
 
 class AppModule extends Module {
   @override
   List<Bind> get binds => [
-        Bind.singleton<MovieService>((i) => MovieApiServiceImpl()),
+        Bind.singleton<MovieService>((i) => MovieLocalServiceImpl()),
         Bind.singleton((i) => ImcController()),
         Bind.singleton((i) => PriceController()),
         Bind.singleton((i) => CpfController()),
