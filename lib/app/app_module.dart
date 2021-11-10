@@ -1,26 +1,24 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:fteam_test/app/cpf/controllers/cpf_controller.dart';
 import 'package:fteam_test/app/cpf/views/cpf_view.dart';
-import 'package:fteam_test/app/movies/controllers/movie_controller.dart';
 import 'package:fteam_test/app/movies/services/movie_service.dart';
 import 'package:fteam_test/app/movies/services/movie_service_api_impl.dart';
-import 'package:fteam_test/app/price/controllers/price_controller.dart';
+import 'package:fteam_test/app/price/view_model/price_view_model.dart';
 import 'package:fteam_test/app/price/views/price_view.dart';
-
 import 'home/views/home_view.dart';
-import 'imc/controllers/imc_controller.dart';
+import 'imc/view_model/imc_view_model.dart';
 import 'imc/views/imc_view.dart';
 import 'movies/services/movie_service_local_impl.dart';
+import 'movies/view_model/movie_view_model.dart';
 import 'movies/views/movie_view.dart';
 
 class AppModule extends Module {
   @override
   List<Bind> get binds => [
         Bind.singleton<MovieService>((i) => MovieLocalServiceImpl()),
-        Bind.singleton((i) => ImcController()),
-        Bind.singleton((i) => PriceController()),
+        Bind.singleton((i) => ImcViewModel()),
+        Bind.singleton((i) => PriceViewModel()),
         Bind.singleton((i) => CpfController()),
-        Bind.singleton((i) => MovieController(service: Modular.get()))
+        Bind.singleton((i) => MovieViewModel(service: Modular.get()))
       ];
 
   @override
@@ -32,3 +30,5 @@ class AppModule extends Module {
         ChildRoute('/movies', child: (context, args) => const MoviesView()),
       ];
 }
+
+class CpfController {}

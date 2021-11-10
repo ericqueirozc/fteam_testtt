@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:fteam_test/app/price/controllers/price_controller.dart';
+import 'package:fteam_test/app/price/view_model/price_view_model.dart';
 
 import 'components/custom_form_field_component.dart';
 
@@ -14,10 +14,10 @@ class PriceView extends StatefulWidget {
 class _PriceViewState extends State<PriceView> {
   @override
   Widget build(BuildContext context) {
-    final controller = Modular.get<PriceController>();
+    final controller = Modular.get<PriceViewModel>();
     return Scaffold(
       appBar: AppBar(
-        title: Text("Price de Moedas"),
+        title: Text("Conversor de Moedas"),
       ),
       body: Padding(
         padding: EdgeInsets.all(12),

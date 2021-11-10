@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:fteam_test/app/imc/models/person_model.dart';
 
-class ImcController extends ChangeNotifier {
+class ImcViewModel extends ChangeNotifier {
   //gerenciamento
   double _peso = 0;
   double _altura = 0;

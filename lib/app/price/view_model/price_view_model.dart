@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fteam_test/app/price/models/price_model.dart';
 
-class PriceController {
-  PriceController();
+class PriceViewModel {
+  PriceViewModel();
 
   //Properties
   TextEditingController dollarController = TextEditingController();
