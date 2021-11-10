@@ -7,7 +7,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text("Meus aplicativos")),
+        appBar: AppBar(
+          title: const Text("Meus aplicativos"),
+        ),
         body: ListView(
           children: [
             Card(
